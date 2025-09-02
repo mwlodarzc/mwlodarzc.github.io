@@ -1,9 +1,55 @@
+/* =========================================
+   Color tokens
+   ========================================= */
+:root{
+  --c-arrow: #8A9DA8;
+  --c-backtop-bg: #E7E8E6;
+
+  --c-menu-bg: #224b8d;
+  --c-menu-link: rgb(240,240,240);
+  --c-menu-link-hover: rgb(160,160,160);
+
+  --c-container-shadow: #122b6d;
+
+  --c-white: #ffffff; /* also used instead of 'white' */
+  --c-layout-menu-bg: #f6f6f6;
+  --c-border-ddd: #dddddd;
+  --c-layout-menu-td-bg: #f4f4f4;
+
+  --c-layout-menu-current: #022b6d;
+  --c-layout-menu-link: #022b8d;
+
+  --c-border-aaa: #aaaaaa;
+  --c-link: rgb(0,0,255);
+  --c-gray: gray;
+
+  --c-blocktitle: #cd7b62;
+  --c-border-silver: silver;
+  --c-infobg: #ffffee;
+  --c-codebg: #f6f6f6;
+
+  --c-syntax-pycommand: #000070;
+  --c-syntax-statement: #008800;
+  --c-syntax-builtin: #000088;
+  --c-syntax-special: #990000;
+  --c-syntax-operator: #880000;
+  --c-syntax-error: #aa0000;
+  --c-muted: #606060;
+
+  --c-border-c0: #c0c0c0;
+  --c-footer-link: #80a0b0;
+  --c-thumb-border: #e0e0e0;
+
+  --c-black: black;
+  --c-text: #222222;
+}
+
 /* Default css file for jemdoc. */
 
 /* Arrow */
 .arrow {
     border: 9px solid transparent;
-    border-bottom-color: #8A9DA8;
+    border-bottom-color: var(--c-arrow);
     width: 0px;
     height: 0px;
     top:0px
@@ -13,7 +59,7 @@
     width: 8px;
     height: 14px;
     border-radius: 1px;
-    background-color: #8A9DA8;
+    background-color: var(--c-arrow);
     top:15px;
 }
 
@@ -25,7 +71,7 @@
 }
 
 #back_top {
-    background-color: #E7E8E6;
+    background-color: var(--c-backtop-bg);
     height: 40px;
     width: 40px;
     border-radius: 3px;
@@ -40,7 +86,7 @@
 /* Menu */
 .menu {
 	/* background-color: #527bbd; */
-	background-color: #224b8d;
+	background-color: var(--c-menu-bg);
     left: 0;
     top: 0;
     width: 100%;
@@ -55,23 +101,23 @@
 	font-size: 110%;
 	/*font-weight: bolder;*/
 	padding: 0.25ex 1.5ex;
-	color: rgb(240,240,240);
+	color: var(--c-menu-link);
 	text-decoration: none;
 	transition: .2s;
 }
 
 .menu a:link {
-	color: rgb(240,240,240);
+	color: var(--c-menu-link);
 	/*color: #9e9e9e;*/
 }
 
 .menu a:visited {
-	color: rgb(240,240,240);
+	color: var(--c-menu-link);
 	/*color: #9e9e9e;*/
 }
 
 .menu a:hover, .menu a:active {
-    color: rgb(160,160,160);
+    color: var(--c-menu-link-hover);
     /*color: #ffffff;*/
 	text-decoration: none;
 }
@@ -83,9 +129,9 @@
 	min-height: 1000px;
 	max-height: 999999px; /* prevents font boosting */
 	margin: 56px auto 20px; /* top right bottom left */
-	box-shadow: 0 0 7px #122b6d; /*527bbd;*/
+	box-shadow: 0 0 7px var(--c-container-shadow); /*527bbd;*/
 	text-align: left;
-	background: #fff;
+	background: var(--c-white);
 	padding: 14px 14px 14px 14px; /* top right bottom left */
 	z-index: 1;
 }
@@ -103,7 +149,7 @@ a.anchor {
 table#tlayout {
     border: none;
     border-collapse: separate;
-    background: white;
+    background: var(--c-white);
 }
 
 @font-face {
@@ -113,15 +159,15 @@ table#tlayout {
 }
 
 body {
- background: white;
+ background: var(--c-white);
  font-family: myFont, Georgia;
  padding-bottom: 8px;
  margin: 0;
 }
 
 #layout-menu {
-	background: #f6f6f6;
-	border: 1px solid #dddddd;
+	background: var(--c-layout-menu-bg);
+	border: 1px solid var(--c-border-ddd);
 	padding-top: 0.5em;
 	padding-left: 8px;
 	padding-right: 8px;
@@ -133,7 +179,7 @@ body {
 }
 
 #layout-menu td {
-	background: #f4f4f4;
+	background: var(--c-layout-menu-td-bg);
     vertical-align: top;
 }
 
@@ -142,7 +188,7 @@ body {
 	padding-left: 1.0em;
 	padding-right: 1.0em;
     border: none;
-    background: white;
+    background: var(--c-white);
     text-align: left;
     vertical-align: top;
 }
@@ -162,21 +208,21 @@ pre, tt {
 }
 
 a, a > tt {
-	color: rgb(0,0,255);
+	color: var(--c-link);
 	text-decoration: none;
 }
 
 a:hover {
-	border-bottom: 1px gray dotted;
+	border-bottom: 1px var(--c-gray) dotted;
 }
 
 #layout-menu a.current:link, #layout-menu a.current:visited {
-	color: #022b6d;
-	border-bottom: 1px gray solid;
+	color: var(--c-layout-menu-current);
+	border-bottom: 1px var(--c-gray) solid;
 }
 #layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
 	/* color: #527bbd; */
-	color: #022b8d;
+	color: var(--c-layout-menu-link);
 	text-decoration: none;
 }
 #layout-menu a:hover {
@@ -184,7 +230,7 @@ a:hover {
 }
 
 div.menu-category {
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid var(--c-gray);
 	margin-top: 0.8em;
 	padding-top: 0.2em;
 	padding-bottom: 0.1em;
@@ -199,7 +245,7 @@ div.menu-item {
 div#toptitle {
 	padding-bottom: 0.2em;
 	margin-bottom: 1.5em;
-	border-bottom: 3px double gray;
+	border-bottom: 3px double var(--c-gray);
 }
 
 /* Reduce space if we begin the page with a title. */
@@ -225,13 +271,13 @@ strong {
 
 h1, h2, h3 {
 	/* color: #527bbd; */
-	color: #224b8d;	
+	color: var(--c-menu-bg);	
 	margin-top: 0.7em;
 	margin-bottom: 0.3em;
 	padding-bottom: 0.2em;
 	line-height: 1.0;
 	padding-top: 0.5em;
-	border-bottom: 1px solid #aaaaaa;
+	border-bottom: 1px solid var(--c-border-aaa);
 }
 
 h1 {
@@ -267,14 +313,14 @@ pre {
 
 div#footer {
 	font-size: small;
-	border-top: 1px solid #c0c0c0;
+	border-top: 1px solid var(--c-border-c0);
 	padding-top: 0.1em;
 	margin-top: 4.0em;
-	color: #c0c0c0;
+	color: var(--c-border-c0);
 }
 
 div#footer a {
-	color: #80a0b0;
+	color: var(--c-footer-link);
 }
 
 div#footer-text {
@@ -298,7 +344,7 @@ dl {
 }
 
 dd {
-	color: #222222;
+	color: var(--c-text);
 }
 
 dd > *:first-child {
@@ -348,18 +394,18 @@ div.codeblock, div.infoblock {
 
 div.blocktitle {
 	font-weight: bold;
-	color: #cd7b62;
+	color: var(--c-blocktitle);
 	margin-top: 1.2em;
 	margin-bottom: 0.1em;
 }
 
 div.blockcontent {
-	border: 1px solid silver;
+	border: 1px solid var(--c-border-silver);
 	padding: 0.3em 0.5em;
 }
 
 div.infoblock > div.blockcontent {
-	background: #ffffee;
+	background: var(--c-infobg);
 }
 
 div.blockcontent p + ul, div.blockcontent p + ol {
@@ -379,30 +425,30 @@ div.infoblock p + p {
 }
 
 div.codeblock > div.blockcontent {
-	background: #f6f6f6;
+	background: var(--c-codebg);
 }
 
 span.pycommand {
-	color: #000070;
+	color: var(--c-syntax-pycommand);
 }
 
 span.statement {
-	color: #008800;
+	color: var(--c-syntax-statement);
 }
 span.builtin {
-	color: #000088;
+	color: var(--c-syntax-builtin);
 }
 span.special {
-	color: #990000;
+	color: var(--c-syntax-special);
 }
 span.operator {
-	color: #880000;
+	color: var(--c-syntax-operator);
 }
 span.error {
-	color: #aa0000;
+	color: var(--c-syntax-error);
 }
 span.comment, span.comment > *, span.string, span.string > * {
-	color: #606060;
+	color: var(--c-muted);
 }
 
 @media print {
@@ -447,12 +493,12 @@ img.eqwl {
 img.proj_thumb {
 	width: 180px;
 	border: 1px solid;
-	border-color: #e0e0e0;
+	border-color: var(--c-thumb-border);
 	padding: 1px;
 }
 
 table {
-    border: 2px solid black;
+    border: 2px solid var(--c-black);
     border-collapse: collapse;
 }
 
@@ -461,7 +507,7 @@ td {
     padding-left: 0.5em;
     padding-right: 0.5em;
     text-align: center;
-    border: 1px solid gray;
+    border: 1px solid var(--c-gray);
 }
 
 table + table {
@@ -470,7 +516,7 @@ table + table {
 
 tr.heading {
     font-weight: bold;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--c-black);
 }
 
 img {
@@ -536,12 +582,12 @@ p.pub_link{
 
 /* Keep visited links the same blue as normal */
 .connection:visited {
-  color: rgb(0,0,255);
+  color: var(--c-link);
   text-decoration: none;
 }
 
 /* Optional: active state stays blue too */
 .connection:active {
-  color: rgb(0,0,255);
+  color: var(--c-link);
 }
 
