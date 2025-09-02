@@ -2,28 +2,15 @@
   --c-arrow: #8A9DA8;
   --c-backtop-bg: #E7E8E6;
 
-  --c-menu-bg: #224b8d;
   --c-menu-link: rgb(240,240,240);
   --c-menu-link-hover: rgb(160,160,160);
 
-  --c-container-shadow: #122b6d;
-
-  --c-white: #ffffff; /* also used instead of 'white' */
-  --c-layout-menu-bg: #f6f6f6;
-  --c-border-ddd: #dddddd;
-  --c-layout-menu-td-bg: #f4f4f4;
-
   --c-layout-menu-current: #022b6d;
   --c-layout-menu-link: #022b8d;
-
-  --c-border-aaa: #aaaaaa;
-  --c-link: rgb(0,0,255);
+  
   --c-gray: gray;
 
-  --c-blocktitle: #cd7b62;
   --c-border-silver: silver;
-  --c-infobg: #ffffee;
-  --c-codebg: #f6f6f6;
 
   --c-syntax-pycommand: #000070;
   --c-syntax-statement: #008800;
@@ -31,14 +18,8 @@
   --c-syntax-special: #990000;
   --c-syntax-operator: #880000;
   --c-syntax-error: #aa0000;
-  --c-muted: #606060;
-
-  --c-border-c0: #c0c0c0;
-  --c-footer-link: #80a0b0;
-  --c-thumb-border: #e0e0e0;
 
   --c-black: black;
-  --c-text: #222222;
   
  /* Backgrounds */
   --c-white: #FFFFFB;
