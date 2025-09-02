@@ -42,6 +42,44 @@
 
   --c-black: black;
   --c-text: #222222;
+  
+ /* Backgrounds */
+  --c-white: #FFFFFB;
+  --c-layout-menu-bg: #f7faf9;
+  --c-layout-menu-td-bg: #f7faf9;
+
+  /* Header / menu / shadow */
+  --c-menu-bg: #0D652D;          /* royal emerald header/menu */
+  --c-container-shadow: #0a4520; /* emerald-tinted shadow */
+
+  /* Text */
+  --c-text: #009020;             /* dimmer emerald for body text */
+  --c-muted: #7aa49b;
+
+  /* Links */
+  --c-link: #119100;             /* lively emerald (same as prev text) */
+  --c-layout-menu-link: #119100;
+  --c-layout-menu-current: #119100; /* darker emerald for active */
+  --c-border-aaa: #119100;       /* heading underline matches link color */
+
+  /* Accents */
+  --c-blocktitle: #00B87A;       /* teal-emerald for block titles */
+
+  /* Dividers & borders */
+  --c-border-ddd: #dbe7e3;
+  --c-black: #0c3019;            /* deep forest emerald for borders */
+
+  /* Info / code blocks */
+  --c-infobg: #f4fffb;
+  --c-codebg: #f5f7f6;
+
+  /* Footer */
+  --c-border-c0: #98a8a3;
+  --c-footer-link: #00A930;
+
+  /* Misc */
+  --c-thumb-border: #dbe7e3;
+
 }
 
 /* Default css file for jemdoc. */
