@@ -498,43 +498,50 @@ p.pub_link{
 	font-size: 14px	
 }
 
-  /* Connections grid */
-  .connections-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 12px;
-    width: 100%;
-    padding: 6px 0;
-  }
+/* Connections grid */
+.connections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  width: 100%;
+  padding: 6px 0;
+}
 
-  /* Individual connection "pill" */
-  .connection {
-    display: block;
-    text-align: center;
-    padding: 10px 14px;
-    border-radius: 12px;
-    background: #f7f9fc;
-    border: 1px solid #e6e8ef;
-    color: #1a1a1a;
-    text-decoration: none;
-    transition: background .15s ease, box-shadow .15s ease, transform .06s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+/* Individual connection link */
+.connection {
+  display: block;
+  text-align: center;
+  padding: 10px 2px;
+  /* no explicit color here → uses global a { color: rgb(0,0,255); } */
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: none;
+  border: none;
+  border-radius: 0;
+  transition: text-decoration .15s ease;
+}
 
-  .connection:hover,
-  .connection:focus {
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-    transform: translateY(-1px);
-    outline: none;
-  }
+/* Hover / focus: underline like a normal link, no dotted border */
+.connection:hover,
+.connection:focus {
+  text-decoration: underline;
+  background: none;
+  box-shadow: none;
+  transform: none;
+  outline: none;
+  border-bottom: none; /* override global a:hover dotted underline */
+}
 
-  /* Optional: soften the section divider */
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #d9dbe3, transparent);
-    margin: 16px 0 10px;
-  }
+/* Keep visited links the same blue as normal */
+.connection:visited {
+  color: rgb(0,0,255);
+  text-decoration: none;
+}
+
+/* Optional: active state stays blue too */
+.connection:active {
+  color: rgb(0,0,255);
+}
+
