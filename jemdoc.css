@@ -27,7 +27,9 @@
   --c-layout-menu-td-bg: #f7faf9;
 
   /* Header / menu / shadow */
-  --c-menu-bg: #0D652D;          /* royal emerald header/menu */
+  --c-menu-bg: #119100;
+   /* #0D652D; */
+            /* royal emerald header/menu */
   --c-container-shadow: #0a4520; /* emerald-tinted shadow */
 
   /* Text */
