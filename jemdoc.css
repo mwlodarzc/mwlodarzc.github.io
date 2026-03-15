@@ -741,6 +741,20 @@ hr.section-divider {
   color: var(--c-link);
 }
 
+/* ── Nav shortcut links ───────────────────────────────────── */
+.staffshortcut {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em 0;
+  margin-top: 0.2em;
+}
+
+.staffshortcut a + a::before {
+  content: '|';
+  margin: 0 0.6em;
+  opacity: 0.4;
+}
+
 /* ── Mobile / narrow-screen layout ───────────────────────── */
 @media (max-width: 700px) {
 
@@ -789,14 +803,9 @@ hr.section-divider {
     text-align: center;
   }
 
-  /* Nav shortcut links: wrap cleanly as a flex row so a pipe
-     never appears alone at the start or end of a line */
+  /* Nav shortcut links: same as desktop but centered */
   .staffshortcut {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    column-gap: 0.4em;
-    line-height: 2;
   }
 
   /* Publications: remove the hanging indent that is too wide
@@ -826,8 +835,26 @@ hr.section-divider {
     display: none;
   }
 
+  /* Last entry: remove the extra bottom gap */
+  h2#Research-Experiences ~ ul li:last-child {
+    padding-bottom: 0;
+  }
+
   h2#Research-Experiences ~ ul li {
     padding-bottom: 0.8em;
+  }
+
+  .name-icons-row {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 0.6em !important;
+    margin-bottom: 0.6em;
+  }
+
+  .social-icons {
+    justify-content: center !important;
+    width: 100%;
+    gap: 1.8em !important;
   }
 }
 
