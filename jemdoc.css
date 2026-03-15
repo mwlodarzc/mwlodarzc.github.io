@@ -53,6 +53,9 @@
   --c-infobg: #f4fffb;
   --c-codebg: #f5f7f6;
 
+  /* Body text */
+  --c-body-text: #1a1a1a;
+
   /* Footer */
   --c-border-c0: #98a8a3;
   --c-footer-link: #00A930;
@@ -60,6 +63,70 @@
   /* Misc */
   --c-thumb-border: #dbe7e3;
 
+}
+
+/* ── Dark mode overrides ──────────────────────────────────── */
+[data-theme="dark"] {
+  --c-white:              #0f1612;
+  --c-layout-menu-bg:     #141d16;
+  --c-layout-menu-td-bg:  #141d16;
+
+  --c-menu-bg:            #1b6035;
+  --c-menu-link:          rgb(200, 230, 210);
+  --c-menu-link-hover:    rgb(130, 185, 150);
+  --c-container-shadow:   rgba(46, 180, 100, 0.12);
+
+  --c-text:               #a4c4ac;
+  --c-muted:              #507a5e;
+  --c-link:               #4ecb71;
+  --c-layout-menu-link:   #4ecb71;
+  --c-layout-menu-current:#6de091;
+  --c-border-aaa:         #2a6038;
+  --c-blocktitle:         #4ecb71;
+
+  --c-border-ddd:         #1c3424;
+  --c-border-silver:      #2a4a36;
+  --c-border-c0:          #2a4438;
+  --c-black:              #c4d8c8;
+  --c-gray:               #4a6454;
+
+  --c-infobg:             #131d15;
+  --c-codebg:             #18241a;
+
+  --c-body-text:          #c4d8c8;
+
+  --c-footer-link:        #4ecb71;
+  --c-thumb-border:       #1c3424;
+
+  --c-backtop-bg:         #1c3028;
+  --c-arrow:              #4a7a5a;
+}
+
+[data-theme="dark"] tt {
+  background: #1e2e20;
+}
+
+/* ── Theme toggle button ──────────────────────────────────── */
+#theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 20px;
+  z-index: 200;
+  background: var(--c-menu-bg);
+  color: var(--c-menu-link);
+  border: none;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.82em;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+
+#theme-toggle:hover {
+  opacity: 0.82;
 }
 
 /* Default css file for jemdoc. */
@@ -178,6 +245,7 @@ table#tlayout {
 
 body {
  background: var(--c-white);
+ color: var(--c-body-text);
  font-family: myFont, Georgia;
  padding-bottom: 8px;
  margin: 0;

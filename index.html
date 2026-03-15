@@ -5,12 +5,21 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="keywords" content="Michał Jan Włodarczyk, Michał Włodarczyk, mwlodarzc, mwlodarzc.github.io">
 <link rel="stylesheet" href="./jemdoc.css" type="text/css" />
+<script>
+  /* Set theme before first paint to avoid flash */
+  (function () {
+    var t = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
 <script src="jquery.min.js"></script>
 <link rel="shortcut icon" href="./profile.jpeg">
 <title>M.J. Włodarczyk</title>
 </head>
 
 <body>
+
+<button id="theme-toggle" title="Switch to light mode" aria-label="Toggle colour theme">&#9728; Light</button>
 
 <a id="home" class="anchor"></a>
 <div id="container">
@@ -177,5 +186,31 @@ Currently, I am part of the <a href="https://credibleai.github.io/" target="_bla
 
 </div>
 </div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        btn.innerHTML = '&#9728; Light';
+        btn.title = 'Switch to light mode';
+      } else {
+        btn.innerHTML = '&#9790; Dark';
+        btn.title = 'Switch to dark mode';
+      }
+    }
+
+    /* Sync button label with the theme already set in <head> */
+    applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+</script>
 </body>
 </html>
