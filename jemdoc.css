@@ -680,6 +680,13 @@ p.pub_link{
 	font-size: 14px	
 }
 
+/* Academic Achievements: extra breathing room between entries */
+h2#Academic-Achievements ~ ul > li {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+
 /* Section divider */
 hr.section-divider {
   border: none;
@@ -732,5 +739,95 @@ hr.section-divider {
 /* Optional: active state stays blue too */
 .connection:active {
   color: var(--c-link);
+}
+
+/* ── Mobile / narrow-screen layout ───────────────────────── */
+@media (max-width: 700px) {
+
+  /* Container fills the screen; top padding reserves space for toggle button */
+  .container {
+    width: auto;
+    margin: 0;
+    padding: 46px 14px 14px;
+    min-height: unset;
+    box-sizing: border-box;
+  }
+
+  /* Toggle button: smaller, sits in the reserved top-right space */
+  #theme-toggle {
+    font-size: 0.74em;
+    padding: 4px 10px;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* Profile header: stack photo above text */
+  table.imgtable,
+  table.imgtable tbody,
+  table.imgtable tr,
+  table.imgtable td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Photo cell: centered */
+  table.imgtable td:first-child {
+    text-align: center;
+    padding-bottom: 1em;
+  }
+
+  table.imgtable img {
+    display: block;
+    margin: 0 auto;
+    height: auto !important;
+    max-width: 150px;
+  }
+
+  /* Info cell: centered to match the photo above it */
+  table.imgtable td:last-child {
+    text-align: center;
+  }
+
+  /* Nav shortcut links: wrap cleanly as a flex row so a pipe
+     never appears alone at the start or end of a line */
+  .staffshortcut {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 0.4em;
+    line-height: 2;
+  }
+
+  /* Publications: remove the hanging indent that is too wide
+     for a narrow mobile screen */
+  ul li p[style*="margin-left"] {
+    margin-left: 0 !important;
+    text-indent: 0 !important;
+  }
+
+  /* Research entries: override inline float styles, stack vertically */
+  h2#Research-Experiences ~ ul li div {
+    float: none !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    width: 100%;
+  }
+
+  /* Date / location div: visually separate from the role above it */
+  h2#Research-Experiences ~ ul li div + div {
+    color: var(--c-muted);
+    font-size: 0.9em;
+    margin-top: 0.2em;
+  }
+
+  /* Hide only the direct-child <br> float-clearers, not the ones inside divs */
+  h2#Research-Experiences ~ ul li > br {
+    display: none;
+  }
+
+  h2#Research-Experiences ~ ul li {
+    padding-bottom: 0.8em;
+  }
 }
 
