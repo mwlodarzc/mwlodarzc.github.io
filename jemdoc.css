@@ -65,46 +65,95 @@
 
 }
 
-/* ── Dark mode overrides ──────────────────────────────────── */
+/* ── Dark mode overrides ──────────────────────────────────── *
+ *  Every value is derived from its light-mode counterpart:   *
+ *  same hue, adjusted lightness/saturation for a dark canvas.*
+ * ─────────────────────────────────────────────────────────── */
 [data-theme="dark"] {
-  --c-white:              #0f1612;
-  --c-layout-menu-bg:     #141d16;
-  --c-layout-menu-td-bg:  #141d16;
 
-  --c-menu-bg:            #1b6035;
-  --c-menu-link:          rgb(200, 230, 210);
-  --c-menu-link-hover:    rgb(130, 185, 150);
-  --c-container-shadow:   rgba(46, 180, 100, 0.12);
+  /* Backgrounds
+   * #FFFFFB (near-white) → very dark forest, same family as #0a4520 shadow */
+  --c-white:              #0a150d;
+  /* #f7faf9 (light green-tinted) → slight lift above main bg */
+  --c-layout-menu-bg:     #0d1a10;
+  --c-layout-menu-td-bg:  #0d1a10;
 
-  --c-text:               #a4c4ac;
-  --c-muted:              #507a5e;
-  --c-link:               #4ecb71;
-  --c-layout-menu-link:   #4ecb71;
-  --c-layout-menu-current:#6de091;
-  --c-border-aaa:         #2a6038;
-  --c-blocktitle:         #4ecb71;
+  /* Accent / headings
+   * #119100 (H:123° S:100% L:28%) → same hue/saturation, L raised to ~35% */
+  --c-menu-bg:            #1ab800;
+  /* shadow: solid #0a4520 → soft green glow derived from brightened accent */
+  --c-container-shadow:   rgba(26, 184, 0, 0.15);
 
-  --c-border-ddd:         #1c3424;
-  --c-border-silver:      #2a4a36;
-  --c-border-c0:          #2a4438;
-  --c-black:              #c4d8c8;
-  --c-gray:               #4a6454;
+  /* Menu bar links
+   * rgb(240,240,240) near-white → same with slight green tint */
+  --c-menu-link:          rgb(224, 242, 228);
+  /* rgb(160,160,160) mid-gray → same lightness, greened */
+  --c-menu-link-hover:    rgb(130, 185, 145);
 
-  --c-infobg:             #131d15;
-  --c-codebg:             #18241a;
+  /* Body / general text
+   * #1a1a1a near-black → near-white from #FFFFFB with faint green tint */
+  --c-body-text:          #edf5ef;
 
-  --c-body-text:          #c4d8c8;
+  /* Inline text accent (dd elements)
+   * #009020 dimmer emerald → same hue, brightened to match accent */
+  --c-text:               #1ab800;
+  /* #7aa49b muted teal → same teal, reduced lightness for dark bg */
+  --c-muted:              #4d7a6e;
 
-  --c-footer-link:        #4ecb71;
-  --c-thumb-border:       #1c3424;
+  /* Links
+   * #119100 → same brightening as accent */
+  --c-link:               #1ab800;
+  --c-layout-menu-link:   #1ab800;
+  /* active/current: slight further lift */
+  --c-layout-menu-current:#28e000;
+  /* heading underline: mid-forest from #0c3019, half-way between dark and accent */
+  --c-border-aaa:         #1a6020;
 
-  --c-backtop-bg:         #1c3028;
-  --c-arrow:              #4a7a5a;
+  /* Accents
+   * #00B87A teal-emerald → same hue, lightness nudged up */
+  --c-blocktitle:         #00d08a;
+
+  /* Borders & dividers
+   * #dbe7e3 light gray-green → inverted: dark forest from #0c3019 */
+  --c-border-ddd:         #0c2818;
+  /* silver → darkened green-gray */
+  --c-border-silver:      #1a3e28;
+  /* #98a8a3 muted gray-green → dark equivalent */
+  --c-border-c0:          #1e3e2c;
+  /* #0c3019 deep forest (used for table borders) → lightened for visibility */
+  --c-black:              #c8e0ce;
+  /* gray → dark greenish gray */
+  --c-gray:               #2e5c3e;
+
+  /* Info / code blocks
+   * #f4fffb near-white mint → very dark mint */
+  --c-infobg:             #091610;
+  /* #f5f7f6 near-white gray-green → dark equivalent */
+  --c-codebg:             #0c1a0f;
+
+  /* Footer
+   * #00A930 bright green link → same as main link accent */
+  --c-footer-link:        #1ab800;
+
+  /* Misc
+   * #dbe7e3 thumb border → same as border-ddd */
+  --c-thumb-border:       #0c2818;
+  /* #E7E8E6 near-white → darkened from main bg */
+  --c-backtop-bg:         #162414;
+  /* #8A9DA8 blue-gray → greenish equivalent */
+  --c-arrow:              #3a6e52;
 }
 
+/* tt has a hardcoded background in the base rules — override for dark */
 [data-theme="dark"] tt {
-  background: #1e2e20;
+  background: #101e12;
 }
+
+/* ── Profile image switching ─────────────────────────────── */
+#profile-dark          { display: none;  }
+#profile-light         { display: block; }
+[data-theme="dark"] #profile-dark  { display: block; }
+[data-theme="dark"] #profile-light { display: none;  }
 
 /* ── Theme toggle button ──────────────────────────────────── */
 #theme-toggle {
