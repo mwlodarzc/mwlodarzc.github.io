@@ -562,6 +562,13 @@ p.pub_link{
 	font-size: 14px	
 }
 
+/* Section divider */
+hr.section-divider {
+  border: none;
+  border-top: 1px solid var(--c-border-ddd);
+  margin: 2em 0 1em;
+}
+
 /* Connections grid */
 .connections-grid {
   display: grid;
