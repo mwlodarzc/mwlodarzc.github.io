@@ -664,6 +664,16 @@ table.imgtable, table.imgtable td {
     text-align: left;
 }
 
+#profile-light, #profile-dark {
+    box-shadow: 0 0 7px var(--c-container-shadow);
+    border-radius: 4px;
+}
+
+[data-theme="dark"] #profile-light,
+[data-theme="dark"] #profile-dark {
+    box-shadow: 0 0 9px rgba(200, 224, 206, 0.18);
+}
+
 
 /* Publication */
 p.pub_title {
