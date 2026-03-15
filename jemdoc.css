@@ -81,8 +81,8 @@
   /* Accent / headings
    * #119100 (H:123° S:100% L:28%) → same hue/saturation, L raised to ~35% */
   --c-menu-bg:            #1ab800;
-  /* shadow: solid #0a4520 → soft green glow derived from brightened accent */
-  --c-container-shadow:   rgba(26, 184, 0, 0.15);
+  /* shadow: solid #0a4520 → green glow derived from brightened accent */
+  --c-container-shadow:   rgba(26, 184, 0, 0.45);
 
   /* Menu bar links
    * rgb(240,240,240) near-white → same with slight green tint */
@@ -106,16 +106,16 @@
   --c-layout-menu-link:   #1ab800;
   /* active/current: slight further lift */
   --c-layout-menu-current:#28e000;
-  /* heading underline: mid-forest from #0c3019, half-way between dark and accent */
-  --c-border-aaa:         #1a6020;
+  /* heading underline: mid-bright forest, clearly visible on dark bg */
+  --c-border-aaa:         #2a8038;
 
   /* Accents
    * #00B87A teal-emerald → same hue, lightness nudged up */
   --c-blocktitle:         #00d08a;
 
   /* Borders & dividers
-   * #dbe7e3 light gray-green → inverted: dark forest from #0c3019 */
-  --c-border-ddd:         #0c2818;
+   * #dbe7e3 light gray-green → inverted: visible dark forest */
+  --c-border-ddd:         #1e4a2c;
   /* silver → darkened green-gray */
   --c-border-silver:      #1a3e28;
   /* #98a8a3 muted gray-green → dark equivalent */
