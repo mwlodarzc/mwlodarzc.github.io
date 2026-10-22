@@ -38,6 +38,14 @@
   background: var(--c-accent-soft);
 }
 
+@media (min-width: 701px) {
+  #theme-toggle {
+    top: -40px;
+    right: 0;
+    background: var(--c-white);
+  }
+}
+
 /* Default css file for jemdoc. */
 
 /* Arrow */
