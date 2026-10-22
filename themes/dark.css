@@ -38,3 +38,7 @@
 [data-theme="dark"] body {
   background: url(dust.svg), var(--c-page);
 }
+
+[data-theme="dark"] .name-icons-row b {
+  font-size: 1.637em;
+}
