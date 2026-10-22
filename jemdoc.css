@@ -764,6 +764,44 @@ ul.timeline::before {
   font-size: 0.92em;
 }
 
+@media (min-width: 900px) {
+  ul.timeline {
+    --dates: 160px;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+  }
+
+  ul.timeline::before {
+    left: calc(6px - var(--gutter));
+  }
+
+  .tl-role,
+  .timeline > li:not(:first-child) .tl-org {
+    width: 0;
+    white-space: nowrap;
+  }
+
+  .tl-sep {
+    display: none;
+  }
+
+  .tl-place {
+    display: block;
+  }
+
+  .tl-when {
+    position: absolute;
+    top: 0.1em;
+    right: calc(100% + var(--gutter) + 0.9em);
+    width: calc(var(--dates) - 0.9em);
+    margin-top: 0;
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
 ul.entries {
   padding-left: 0;
   list-style: none;
