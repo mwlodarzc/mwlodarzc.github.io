@@ -881,6 +881,17 @@ p.subsec b {
   font-size: 0.9em;
 }
 
+.entry-venue .venue-kind {
+  color: inherit;
+  font-size: inherit;
+}
+
+@media (min-width: 701px) {
+  .entry-venue .venue-kind {
+    display: block;
+  }
+}
+
 .entry.preprint .entry-venue {
   color: var(--c-muted);
 }
