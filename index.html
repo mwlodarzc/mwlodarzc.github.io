@@ -6,9 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="keywords" content="Michał Jan Włodarczyk, Michał Włodarczyk, mwlodarzc, mwlodarzc.github.io">
 <link rel="stylesheet" href="./jemdoc.css" type="text/css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Space+Grotesk:wght@600&display=swap" />
 <link rel="stylesheet" href="./themes/light.css" type="text/css" />
 <link rel="stylesheet" href="./themes/dark.css" type="text/css" />
+<link rel="stylesheet" href="./themes/sugar.css" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <script>
   /* Set theme before first paint to avoid flash */
@@ -250,22 +251,21 @@ Currently, I am part of the <a href="https://credibleai.github.io/" target="_bla
   (function () {
     var btn = document.getElementById('theme-toggle');
 
+    var NEXT = { dark: 'light', light: 'sugar', sugar: 'dark' };
+    var LABELS = { light: '&#9728; Light', sugar: '&#10047; Sugar', dark: '&#9790; Dark' };
+
     function applyTheme(theme) {
+      if (!NEXT[theme]) theme = 'dark';
       document.documentElement.setAttribute('data-theme', theme);
-      if (theme === 'dark') {
-        btn.innerHTML = '&#9728; Light';
-        btn.title = 'Switch to light mode';
-      } else {
-        btn.innerHTML = '&#9790; Dark';
-        btn.title = 'Switch to dark mode';
-      }
+      btn.innerHTML = LABELS[NEXT[theme]];
+      btn.title = 'Switch to ' + NEXT[theme] + ' mode';
     }
 
     /* Sync button label with the theme already set in <head> */
     applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
 
     btn.addEventListener('click', function () {
-      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      var next = NEXT[document.documentElement.getAttribute('data-theme')] || 'dark';
       localStorage.setItem('theme', next);
       applyTheme(next);
     });

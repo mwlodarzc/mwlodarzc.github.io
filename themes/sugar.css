@@ -1,0 +1,22 @@
+[data-theme="sugar"] {
+  --c-white: #fffdf8;
+  --c-page: #ffe8d6;
+  --c-body-text: #3b2f2a;
+  --c-link: #b83a6b;
+  --c-menu-bg: #2f7f74;
+  --c-blocktitle: #c2620e;
+  --c-border-aaa: #f7b7a3;
+  --c-border-ddd: #f4e3d7;
+  --c-muted: #75655c;
+  --c-container-shadow: rgba(184, 58, 107, 0.18);
+  --c-gray: #d8bfae;
+}
+
+[data-theme="sugar"] :is(h2, .name-icons-row b, .container > p > b) {
+  font-family: Fredoka, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+}
+
+[data-theme="sugar"] body {
+  background: url(sprinkles.svg), linear-gradient(160deg, #ffe8d6 0%, #ffe1ec 35%, #e4f7ef 70%, #fff6cc 100%) fixed;
+}
