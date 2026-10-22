@@ -606,9 +606,9 @@ table.imgtable, table.imgtable td {
 .name-icons-row b::after {
     content: '';
     display: block;
-    width: 2em;
+    width: 3.2rem;
     height: 2px;
-    margin: 0.3em auto 0.1em;
+    margin: 0.48rem auto 0.16rem;
     border-radius: 2px;
     background: var(--c-border-aaa);
 }
@@ -633,6 +633,7 @@ table.imgtable, table.imgtable td {
 
     .name-icons-row b a {
         font-size: 1.12em;
+        line-height: 1;
     }
 
     .name-icons-row b::after {
