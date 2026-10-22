@@ -179,6 +179,7 @@ body {
 }
 
 html {
+	color-scheme: only light;
 	scroll-behavior: smooth;
 	scrollbar-color: var(--c-accent-mid) transparent;
 	scrollbar-width: thin;
