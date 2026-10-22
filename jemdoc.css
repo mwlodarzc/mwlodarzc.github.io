@@ -596,9 +596,21 @@ table.imgtable, table.imgtable td {
 }
 
 @media (min-width: 701px) {
+    table.imgtable {
+        width: 100%;
+    }
+
+    table.imgtable td:first-child {
+        width: 1px;
+        padding-left: 0;
+    }
+
+    table.imgtable td:last-child {
+        padding-right: 0;
+    }
+
     .name-icons-row b {
         flex: none;
-        width: 20rem;
     }
 }
 
