@@ -906,6 +906,12 @@ hr.section-divider {
 }
 
 /* ── Mobile / narrow-screen layout ───────────────────────── */
+@media (min-width: 701px) {
+  .about {
+    text-align: justify;
+  }
+}
+
 @media (max-width: 700px) {
 
   /* Container fills the screen; top padding reserves space for toggle button */
