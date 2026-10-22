@@ -603,6 +603,16 @@ table.imgtable, table.imgtable td {
     line-height: 2.2rem;
 }
 
+.name-icons-row b::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 2px;
+    margin: 0.3em auto 0.1em;
+    border-radius: 2px;
+    background: var(--c-border-aaa);
+}
+
 @media (min-width: 701px) {
     table.imgtable {
         width: 100%;
@@ -619,6 +629,49 @@ table.imgtable, table.imgtable td {
 
     .name-icons-row b {
         flex: none;
+    }
+
+    .name-icons-row b a {
+        font-size: 1.12em;
+    }
+
+    .name-icons-row b::after {
+        margin-left: 0;
+    }
+
+    .social-icons {
+        align-self: flex-start;
+        margin-top: calc(1.1rem - 1.15em);
+    }
+}
+
+@media (min-width: 1050px) {
+    table.imgtable td:last-child {
+        --photo-col: calc(230px + 1em);
+        padding-right: var(--photo-col);
+    }
+
+    .name-icons-row {
+        position: relative;
+        justify-content: center !important;
+    }
+
+    .name-icons-row b::after {
+        margin-left: auto;
+    }
+
+    .social-icons {
+        position: absolute;
+        top: 0;
+        right: calc(-1 * var(--photo-col));
+    }
+
+    .aff {
+        text-align: center;
+    }
+
+    .staffshortcut {
+        justify-content: center;
     }
 }
 
