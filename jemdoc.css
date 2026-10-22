@@ -975,7 +975,7 @@ p.subsec b {
   text-decoration: underline;
   text-decoration-color: var(--c-accent-mid);
   text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
+  text-underline-offset: 0.3em;
 }
 
 
