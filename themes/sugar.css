@@ -20,3 +20,6 @@
 [data-theme="sugar"] body {
   background: url(sprinkles.svg), linear-gradient(160deg, #ffe8d6 0%, #ffe1ec 35%, #e4f7ef 70%, #fff6cc 100%) fixed;
 }
+
+[data-theme="sugar"] #profile-light { display: none; }
+[data-theme="sugar"] #profile-sugar { display: block; }

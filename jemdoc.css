@@ -11,6 +11,7 @@
 /* ── Profile image switching ─────────────────────────────── */
 #profile-dark          { display: none;  }
 #profile-light         { display: block; }
+#profile-sugar         { display: none;  }
 [data-theme="dark"] #profile-dark  { display: block; }
 [data-theme="dark"] #profile-light { display: none;  }
 
@@ -556,7 +557,7 @@ table.imgtable, table.imgtable td {
     text-align: left;
 }
 
-#profile-light, #profile-dark {
+#profile-light, #profile-dark, #profile-sugar {
     box-shadow: 0 0 7px var(--c-container-shadow);
     border-radius: 4px;
 }
