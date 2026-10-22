@@ -14,7 +14,7 @@
 <script>
   /* Set theme before first paint to avoid flash */
   (function () {
-    var t = localStorage.getItem('theme') || 'dark';
+    var t = localStorage.getItem('theme') || 'sugar';
     document.documentElement.setAttribute('data-theme', t);
   })();
 </script>
@@ -250,17 +250,17 @@ Looking ahead, I am most interested in foundation models for language and vision
     var LABELS = { light: '&#9728; Light', sugar: '&#10047; Sugar', dark: '&#9790; Dark' };
 
     function applyTheme(theme) {
-      if (!NEXT[theme]) theme = 'dark';
+      if (!NEXT[theme]) theme = 'sugar';
       document.documentElement.setAttribute('data-theme', theme);
       btn.innerHTML = LABELS[NEXT[theme]];
       btn.title = 'Switch to ' + NEXT[theme] + ' mode';
     }
 
     /* Sync button label with the theme already set in <head> */
-    applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+    applyTheme(document.documentElement.getAttribute('data-theme') || 'sugar');
 
     btn.addEventListener('click', function () {
-      var next = NEXT[document.documentElement.getAttribute('data-theme')] || 'dark';
+      var next = NEXT[document.documentElement.getAttribute('data-theme')] || 'sugar';
       localStorage.setItem('theme', next);
       applyTheme(next);
     });
