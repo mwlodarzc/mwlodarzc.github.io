@@ -15,6 +15,15 @@
 [data-theme="sugar"] :is(h2, .name-icons-row b, .container > p > b) {
   font-family: Fredoka, 'Trebuchet MS', sans-serif;
   font-weight: 600;
+  font-size-adjust: var(--size-adjust, none);
+}
+
+[data-theme="sugar"] h2 {
+  --size-adjust: 0.567;
+}
+
+[data-theme="sugar"] p.subsec b {
+  --size-adjust: 0.614;
 }
 
 [data-theme="sugar"] body {
