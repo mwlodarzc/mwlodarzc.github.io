@@ -615,9 +615,99 @@ p.pub_link{
 	font-size: 14px	
 }
 
-h2#Research-Experiences + ul > li {
-  margin-top: 1em;
-  margin-bottom: 1em;
+ul.timeline {
+  --lane: 24px;
+  --gutter: calc(2 * var(--lane) + 16px);
+  position: relative;
+  margin-top: 0;
+  padding: 1.3em 0 0 var(--gutter);
+  list-style: none;
+}
+
+ul.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 6px;
+  width: 2px;
+  height: 1.3em;
+  background: linear-gradient(transparent, var(--c-border-aaa) 1em);
+}
+
+.timeline > li {
+  position: relative;
+  margin: 0;
+  padding-bottom: 2.4em;
+}
+
+.timeline > li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline > li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(6px - var(--gutter));
+  width: 2px;
+  background: var(--c-border-aaa);
+}
+
+.timeline > li.tl-gap::before {
+  background: linear-gradient(var(--c-border-aaa) calc(100% - 2.4em), transparent calc(100% - 2.4em) calc(100% - 1.1em), var(--c-border-aaa) calc(100% - 1.1em));
+}
+
+.timeline > li.tl-gap::after {
+  content: '';
+  position: absolute;
+  bottom: calc(1.75em - 2px);
+  left: calc(5px - var(--gutter));
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--c-border-aaa);
+}
+
+.tl-dot {
+  position: absolute;
+  z-index: 1;
+  top: calc(0.775em - 6px);
+  left: calc(1px - var(--gutter));
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--c-link);
+  border-radius: 50%;
+  background: var(--c-white);
+}
+
+.tl-parallel .tl-dot {
+  left: calc(1px + var(--lane) - var(--gutter));
+}
+
+.tl-parallel .tl-dot::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: calc(100% + 2px);
+  width: calc(var(--lane) - 6px);
+  height: 2px;
+  background: var(--c-border-aaa);
+}
+
+.tl-org a {
+  font-weight: bold;
+}
+
+.tl-role {
+  margin-top: 0.1em;
+  font-style: italic;
+}
+
+.tl-when {
+  margin-top: 0.1em;
+  color: var(--c-muted);
+  font-size: 0.92em;
 }
 
 ul.entries {
@@ -839,33 +929,8 @@ hr.section-divider {
     text-align: left;
   }
 
-  /* Research entries: override inline float styles, stack vertically */
-  h2#Research-Experiences ~ ul li div {
-    float: none !important;
-    text-align: left !important;
-    padding-left: 0 !important;
-    width: 100%;
-  }
-
-  /* Date / location div: visually separate from the role above it */
-  h2#Research-Experiences ~ ul li div + div {
-    color: var(--c-muted);
-    font-size: 0.9em;
-    margin-top: 0.2em;
-  }
-
-  /* Hide only the direct-child <br> float-clearers, not the ones inside divs */
-  h2#Research-Experiences ~ ul li > br {
-    display: none;
-  }
-
-  /* Last entry: remove the extra bottom gap */
-  h2#Research-Experiences ~ ul li:last-child {
-    padding-bottom: 0;
-  }
-
-  h2#Research-Experiences ~ ul li {
-    padding-bottom: 0.8em;
+  ul.timeline {
+    --lane: 18px;
   }
 
   .name-icons-row {
