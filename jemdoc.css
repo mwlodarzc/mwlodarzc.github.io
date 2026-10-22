@@ -134,6 +134,12 @@
 	z-index: 1;
 }
 
+@media (min-width: 701px) {
+	.container {
+		max-width: calc(100% - 94px);
+	}
+}
+
 a.anchor {
 	display: block; 
 	position: relative; 
@@ -577,6 +583,10 @@ table.imgtable, table.imgtable td {
 [data-theme="dark"] #profile-light,
 [data-theme="dark"] #profile-dark {
     box-shadow: 0 0 9px rgba(200, 224, 206, 0.18);
+}
+
+.name-icons-row {
+    flex-wrap: wrap;
 }
 
 .name-icons-row b {
