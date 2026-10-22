@@ -773,6 +773,22 @@ p + ul.entries {
   margin-top: 0.6em;
 }
 
+p.subsec {
+  margin: 1.1em 0 0.3em;
+  text-align: center;
+}
+
+ul.entries + p.subsec {
+  margin-top: 2.2em;
+}
+
+p.subsec b {
+  color: var(--c-menu-bg);
+  font-size: 0.82em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .entry {
   display: grid;
   grid-template-columns: 8.75em 1fr;
